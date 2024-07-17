@@ -15,7 +15,7 @@ function App() {
     setLoading(true);
     setError(null);
     try {
-      const url = `http://dataservice.accuweather.com/locations/v1/cities/autocomplete?apikey=${API}&q=${inputSearch}`;
+      const url = `https://dataservice.accuweather.com/locations/v1/cities/autocomplete?apikey=${API}&q=${inputSearch}`;
       const result = await axios.get(url);
       setLocationResult(result.data.slice(0, 5));
     } catch (err) {
@@ -30,7 +30,7 @@ function App() {
     setLoading(true);
     setError(null);
     try {
-      const url = `http://dataservice.accuweather.com/currentconditions/v1/${locationKey}?apikey=${API}`;
+      const url = `https://dataservice.accuweather.com/currentconditions/v1/${locationKey}?apikey=${API}`;
       const result = await axios.get(url);
       setWeather(result.data[0]);
     } catch (err) {
