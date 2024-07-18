@@ -5,11 +5,13 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
+  background: rgb(238,174,202);
+background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(79,169,205,1) 0%, rgba(154,106,200,1) 0%, rgba(113,131,199,1) 44%, rgba(101,138,199,1) 57%); font-family: Arial, sans-serif;
   line-height: 1.6;
 }
 
 .MainContainer {
+  
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
