@@ -1,113 +1,110 @@
-.MainContainer {
-  background: radial-gradient(
-    circle,
-    rgba(238, 174, 202, 1) 0%,
-    rgba(148, 187, 233, 1) 100%
-  );
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  height: 100vh;
-  padding: 20px;
+* {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
+}
+
+body {
   font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+.MainContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .search-container {
-  width: 60%;
-}
-
-.input-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   width: 100%;
+  max-width: 600px;
   margin-bottom: 20px;
 }
 
-.input-field {
-  flex: 1;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background: white;
-  font-size: 18px;
-  color: black;
-}
-
-.input-field:focus {
-  border-color: #007bff;
-  outline: none;
-}
-
-.button-I {
-  background-color: #007bff;
-  border: none;
-  color: white;
-  padding: 10px 20px;
-  margin-left: 10px;
-  border-radius: 5px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s, transform 0.3s;
-}
-
-.button-I:hover {
-  background-color: # 0056b3;
-  transform: scale(1.05);
-}
-
-.button-I:disabled {
-  background-color: #007bff;
-  opacity: 0.6;
-  cursor: not-allowed;
-}
-
-.location-results {
+.input-button {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
 }
 
-.button-O {
-  background-color: #28a745;
+.input-field {
+  width: 80%;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 1em;
+}
+
+.button-I {
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  background-color: #007bff;
   color: white;
-  padding: 12px 20px;
   border: none;
   border-radius: 5px;
-  font-size: 15px;
-  cursor: pointer;
-  transition: background-color 0.3s, transform 0.3s;
+  transition: background-color 0.3s ease;
+}
+
+.button-I:hover {
+  background-color: #0056b3;
+}
+
+.location-results {
   width: 100%;
-  max-width: 400px;
-  text-align: center;
-  margin: 10px 0;
-  white-space: nowrap;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.button-O {
+  padding: 10px 20px;
+  margin: 5px 0;
+  font-size: 1em;
+  cursor: pointer;
+  background-color: #f8f9fa;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  width: 80%;
 }
 
 .button-O:hover {
-  background-color: #218838;
-  transform: scale(1.05);
-}
-
-.button-O:active {
-  background-color: #1e7e34;
-  transform: scale(1);
+  background-color: #e2e6ea;
 }
 
 .weather-info {
-  background: rgba(255, 255, 255, 0.8);
-  border-radius: 5px;
-  padding: 20px;
-  font-size: 20px;
-  margin-left: 20px;
-  width: 30%;
-  text-align: center;
+  margin-top: 20px;
+  font-size: 1.2em;
+  font-weight: bold;
 }
 
-.error {
-  color: red;
-  font-size: 18px;
-  margin-bottom: 20px;
+@media (min-width: 600px) {
+  .input-button {
+    flex-direction: row;
+  }
+
+  .input-field {
+    width: calc(100% - 150px);
+    margin-right: 10px;
+  }
+
+  .button-I {
+    width: 140px;
+  }
+
+  .location-results {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .button-O {
+    width: calc(50% - 20px);
+    margin: 10px;
+  }
 }
